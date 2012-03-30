@@ -1,0 +1,49 @@
+setlocal foldmethod=expr
+setlocal foldexpr=GetXXYPythonFold(v:lnum)
+
+function! NextNonBlankLine(lnum)
+    let numlines = line('$')
+    let current = a:lnum + 1
+
+    while current <= numlines
+        if getline(current) =~? '\v\S'
+            return current
+        endif
+
+        let current += 1
+    endwhile
+
+    return -2
+endfunction
+
+
+function! IndentLevel(lnum)
+    return indent(a:lnum) / &shiftwidth
+endfunction
+
+function! GetXXYPythonFold(lnum)
+    if getline(a:lnum) =~? '\v^\s*$'
+        return '-1'
+    endif
+
+    if a:lnum>0 && getline(a:lnum-1) =~? '\v\\$'
+        return IndentLevel(a:lnum-1)
+    endif
+
+    if getline(a:lnum) =~? '\v\\$'
+        return IndentLevel(a:lnum)
+    endif
+
+    let this_indent = IndentLevel(a:lnum)
+    let next_indent = IndentLevel(NextNonBlankLine(a:lnum))
+
+    if next_indent == this_indent
+        return this_indent
+    elseif next_indent < this_indent
+        return this_indent
+    elseif next_indent > this_indent
+        return '>' . next_indent
+    endif
+endfunction
+
+

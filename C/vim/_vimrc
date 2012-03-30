@@ -1,0 +1,36 @@
+
+""************************************************************************
+"this is to source all the customized settings files
+let vimConfigDir = 'C:\vim\vimConfig'
+execute 'source '.vimConfigDir.'/basic.vim'
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+execute 'source '.vimConfigDir.'/taglist.vim'
+execute 'source '.vimConfigDir.'/diff.vim'
+execute 'source '.vimConfigDir.'/pathogen.vim'
+execute 'source '.vimConfigDir.'/autocomp.vim'
+execute 'source '.vimConfigDir.'/eclim.vim'
+execute 'source '.vimConfigDir.'/mark.vim'
+execute 'source '.vimConfigDir.'/fold.vim'
+execute 'source '.vimConfigDir.'/statusline.vim'
+execute 'source '.vimConfigDir.'/buffer.vim'
+execute 'source '.vimConfigDir.'/quickfix.vim'
+execute 'source '.vimConfigDir.'/nerdtree.vim'
+execute 'source '.vimConfigDir.'/paste.vim'
+execute 'source '.vimConfigDir.'/search.vim'
+execute 'source '.vimConfigDir.'/ctags.vim'
+execute 'source '.vimConfigDir.'/supertab.vim'
+execute 'source '.vimConfigDir.'/error.vim'
+execute 'source '.vimConfigDir.'/gundo.vim'
+execute 'source '.vimConfigDir.'/rope.vim'
+execute 'source '.vimConfigDir.'/syntastic.vim'
+execute 'source '.vimConfigDir.'/makegreen.vim'
+execute 'source '.vimConfigDir.'/virtualenv.vim'
+"*************************************************************************
+
+
+
+
+
+
+
