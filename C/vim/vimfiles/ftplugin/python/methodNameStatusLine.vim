@@ -1,4 +1,5 @@
-set statusline +=%3*\ \ %{GetPythonMethodName()}%*
+let s:saved_statusline = &statusline
+
 
 function! GetPythonMethodName() range
 
@@ -23,3 +24,11 @@ function! GetPythonMethodName() range
     return 'global'
 
 endfunction
+
+augroup addStatusLineEntry
+    autocmd!
+    autocmd BufEnter *.py set statusline +=%3*\ \ %{GetPythonMethodName()}%*
+augroup deleteStatusLineEntry
+    autocmd!
+    autocmd BufLeave *.py let &statusline = s:saved_statusline
+augroup END

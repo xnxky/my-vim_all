@@ -1,4 +1,5 @@
-set statusline +=%3*\ \ %{GetPerlMethodName()}%*
+let s:saved_statusline = &statusline
+
 function! GetPerlMethodName()
 
     let current = a:firstline
@@ -15,3 +16,12 @@ function! GetPerlMethodName()
     return 'global'
 
 endfunction
+
+
+augroup addStatusLineEntry
+    autocmd!
+    autocmd BufEnter *.pl set statusline +=%3*\ \ %{GetPerlMethodName()}%*
+augroup deleteStatusLineEntry
+    autocmd!
+    autocmd BufLeave *.pl let &statusline = s:saved_statusline
+augroup END
