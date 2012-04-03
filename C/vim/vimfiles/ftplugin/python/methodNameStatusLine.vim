@@ -25,9 +25,17 @@ function! GetPythonMethodName() range
 
 endfunction
 
+function! GetIndent() range
+    return indent(a:firstline)
+endfunction
+
+function! ModifyStatusline()
+    set statusline +=%3*\ \ %{GetIndent()}%* 
+    set statusline +=%3*\ \ %{GetPythonMethodName()}%*
+endfunction
 augroup addStatusLineEntry
     autocmd!
-    autocmd BufEnter *.py set statusline +=%3*\ \ %{GetPythonMethodName()}%*
+    autocmd BufEnter *.py :call ModifyStatusline()
 augroup deleteStatusLineEntry
     autocmd!
     autocmd BufLeave *.py let &statusline = s:saved_statusline
