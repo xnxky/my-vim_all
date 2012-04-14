@@ -2,6 +2,10 @@
 " let g:pep8_map='whatever'
 " in your .vimrc
 " To change the color of
+
+"for pep8
+let g:pep8_map = '<leader>8'
+
 function! <SID>Pep8()
   set lazyredraw
   " Close any existing cwindows.
@@ -53,6 +57,4 @@ else
           \ g:pep8_map ." is taken and a replacement was not assigned."
   endif
 endif
-"for pep8
-let g:pep8_map = '<leader>8'
 
