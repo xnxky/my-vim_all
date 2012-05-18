@@ -61,8 +61,8 @@ colorscheme vividchalk
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "this is for addng double quote around words
-:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-:nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+:nnoremap <leader>" viw<esc>i"<esc>hbi"<esc>lel
+:nnoremap <leader>' viw<esc>i'<esc>hbi'<esc>lel
 :vnoremap <leader>" o<esc>i"<esc>gvo<esc>a"<esc>l
 :vnoremap <leader>' o<esc>i'<esc>gvo<esc>a'<esc>l
 "*************************************************************************************
