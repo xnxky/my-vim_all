@@ -9,6 +9,6 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_mode_map = { "mode": "passive",
             \ "active_filetypes": [],
             \ "passive_filetypes": [] }
-noremap <silent> <leader>st  <Esc>:SyntasticToggleMode<CR>
 noremap <silent> <leader>se  <Esc>:Errors<CR>
 noremap <silent> <leader>sc  <Esc>:SyntasticCheck<CR>
+noremap <silent> <leader>st  <Esc>:SyntasticToggleMode<CR>
