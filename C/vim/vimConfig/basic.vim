@@ -36,6 +36,10 @@ set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
  
+"set autochdir
+set autochdir
+
+
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes 
@@ -84,3 +88,5 @@ inoremap <M-[> []<ESC>i
 inoremap <M-{> {}<ESC>i  
 
 
+"***********************************************************************************
+nnoremap <esc> :noh<CR><esc>

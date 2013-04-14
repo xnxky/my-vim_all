@@ -1,11 +1,9 @@
 " To change mapping, just put
 " let g:pep8_map='whatever'
 " in your .vimrc
-" To change the color of
-
-"for pep8
+" To change theocolor of
 let g:pep8_map = '<leader>8'
-
+ 
 function! <SID>Pep8()
   set lazyredraw
   " Close any existing cwindows.

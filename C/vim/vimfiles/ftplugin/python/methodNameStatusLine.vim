@@ -1,6 +1,4 @@
 let s:saved_statusline = &statusline
-
-
 function! GetPythonMethodName() range
 
     let current = a:firstline

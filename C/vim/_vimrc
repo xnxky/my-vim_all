@@ -6,6 +6,7 @@ execute 'source '.vimConfigDir.'/basic.vim'
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 execute 'source '.vimConfigDir.'/taglist.vim'
+execute 'source '.vimConfigDir.'/tagbar.vim'
 execute 'source '.vimConfigDir.'/diff.vim'
 execute 'source '.vimConfigDir.'/pathogen.vim'
 execute 'source '.vimConfigDir.'/autocomp.vim'
@@ -26,11 +27,5 @@ execute 'source '.vimConfigDir.'/rope.vim'
 execute 'source '.vimConfigDir.'/syntastic.vim'
 execute 'source '.vimConfigDir.'/makegreen.vim'
 execute 'source '.vimConfigDir.'/virtualenv.vim'
+execute 'source '.vimConfigDir.'/ultisnips.vim'
 "*************************************************************************
-
-
-
-
-
-
-

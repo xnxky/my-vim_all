@@ -26,14 +26,6 @@ function! GetXXYPythonFold(lnum)
         return '-1'
     endif
 
-    if a:lnum>0 && getline(a:lnum-1) =~? '\v\\$'
-        return IndentLevel(a:lnum-1)
-    endif
-
-    if getline(a:lnum) =~? '\v\\$'
-        return IndentLevel(a:lnum)
-    endif
-
     let this_indent = IndentLevel(a:lnum)
     let next_indent = IndentLevel(NextNonBlankLine(a:lnum))
 
